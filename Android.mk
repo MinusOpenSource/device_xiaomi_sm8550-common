@@ -6,6 +6,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter nuwa fuxi socrates,$(TARGET_DEVICE)),)
+ifneq ($(filter vermeer nuwa fuxi socrates,$(TARGET_DEVICE)),)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
