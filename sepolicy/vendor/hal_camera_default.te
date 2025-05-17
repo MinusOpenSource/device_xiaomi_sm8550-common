@@ -1,6 +1,6 @@
 add_hwservice(hal_camera_server, vendor_hal_camerapostproc_xiaomi_hwservice)
 hal_server_domain(hal_camera_default, vendor_hal_camerapostproc_xiaomi)
-allow hal_camera_default camera_persist_file:dir search;
+allow hal_camera_default camera_persist_file:dir r_dir_perms;
 binder_call(vendor_hal_camerapostproc_xiaomi_client, vendor_hal_camerapostproc_xiaomi_server)
 binder_call(vendor_hal_camerapostproc_xiaomi_server, vendor_hal_camerapostproc_xiaomi_client)
 allow hal_camera_client vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
@@ -12,7 +12,6 @@ allow hal_camera_default sysfs_csiphy_umd_paras:file rw_file_perms;
 allow hal_camera_default sys_thermal_flash_state:file rw_file_perms;
 allow hal_camera_default sys_thermal_torch_real_level:file rw_file_perms;
 allow hal_camera_default vendor_persist_sensors_file:dir search;
-allow hal_camera_default vendor_sysfs_battery_supply:dir search;
 allow hal_camera_default proc_pressure_cpu:file read;
 allow hal_camera_default proc_pressure_mem:file read;
 
@@ -23,6 +22,12 @@ hal_attribute_service(hal_camera, hal_camera_service)
 r_dir_file(hal_camera_default, camera_persist_file)
 r_dir_file(hal_camera_default, mnt_vendor_file)
 r_dir_file(hal_camera_default, vendor_persist_sensors_file)
-
+r_dir_file(hal_camera_default, vendor_sysfs_battery_supply)
 dontaudit hal_camera graphics_device:dir search;
 dontaudit hal_camera_default default_prop:file read;
+
+allow hal_camera_default hal_quickcamera_hwservice:hwservice_manager { add find };
+allow hal_camera_default cgroup:file { getattr map open read write };
+allow hal_camera_default proc_pressure_io:file { getattr open read write };
+allow hal_camera_default vendor_sysfs_devfreq:dir search;
+get_prop(hal_camera_default, exported_camera_prop)

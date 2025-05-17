@@ -16,7 +16,6 @@ android_app {
     system_ext_specific: true,
     static_libs: [
         "androidx.core_core",
-        "org.lineageos.settings.resources",
         "SettingsLib",
     ],
     required: [
