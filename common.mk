@@ -313,8 +313,9 @@ PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi \
-    vendor/qcom/opensource/usb/etc
-
+    vendor/qcom/opensource/usb/etc \
+    vendor/savitech/lhdc/5.15
+    
 # Telephony
 PRODUCT_PACKAGES += \
     extphonelib \
