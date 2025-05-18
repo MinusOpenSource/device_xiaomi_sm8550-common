@@ -4,3 +4,6 @@ vendor_public_prop(vendor_fp_prop)
 vendor_public_prop(vendor_nfc_mi_prop)
 vendor_public_prop(vendor_thermal_normal_prop)
 vendor_public_prop(vendor_panel_info_prop)
+
+# Mlipay
+vendor_public_prop(vendor_payment_security_prop)

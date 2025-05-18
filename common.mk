@@ -214,6 +214,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcodec2_hidl_shim
 
+# Mlipay
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.mlipay@1.1.vendor
+    
 # ModemManager
 PRODUCT_PACKAGES += \
     libqesdk_manager_32bit_stub \
