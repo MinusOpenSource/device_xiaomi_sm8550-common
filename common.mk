@@ -381,11 +381,11 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Vibrator
-$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.xiaomi)
-$(call soong_config_set,qti_vibrator,use_effect_stream,true)
-
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service
+    vendor.qti.hardware.vibrator.service.xiaomi
+
+PRODUCT_COPY_FILES += \
+    hardware/xiaomi/aidl/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # WiFi
 PRODUCT_PACKAGES += \
