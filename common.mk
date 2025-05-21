@@ -275,6 +275,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
 
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := \
+    alarm \
+    audio \
+    av \
+    bt \
+    display \
+    gps \
+    init \
+    overlay \
+    perf \
+    sepolicy \
+    wfd
+
 # PSI
 PRODUCT_PACKAGES += \
     libpsi

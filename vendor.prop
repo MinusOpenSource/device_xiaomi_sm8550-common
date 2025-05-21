@@ -129,7 +129,6 @@ vendor.qc2audio.per_frame.flac.dec.enabled=true
 vendor.audio.spkcal.copy.inhal=true
 vendor.audio.compress_capture.enabled=true
 vendor.audio.compress_capture.aac=true
-debug.stagefright.omx_default_rank=0
 vendor.audio.hal.output.suspend.supported=true
 aaudio.mmap_policy=2
 aaudio.mmap_exclusive_policy=2
@@ -253,7 +252,6 @@ vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_gl_backpressure=0
-debug.sf.enable_hwc_vds=0
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.use_phase_offsets_as_durations=0
 debug.sf.late.app.duration=13666666
@@ -278,15 +276,14 @@ debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
 debug.c2.use_dmabufheaps=1
 ro.mediaserver.64b.enable=true
-vendor.mm.enable.qcom_parser=16777215
 
 # OEM unlock
 ro.oem_unlock_supported=1
 
 # Power
 ro.vendor.extension_library=libqti-perfd-client.so
-ro.vendor.perf-hal.ver=2.3
-ro.vendor.perf.scroll_opt=1
+ro.vendor.perf-hal.ver=3.0
+ro.vendor.perf.scroll_opt=true
 vendor.perf.framepacing.enable=1
 vendor.power.pasr.enabled=true
 
