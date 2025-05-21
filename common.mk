@@ -5,7 +5,7 @@
 #
 
 # Add common definitions for Qualcomm
-$(call inherit-product, hardware/qcom-caf/common/common.mk)
+$(call inherit-product, device/qcom/common/common.mk)
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -119,6 +119,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
+
+PRODUCT_PACKAGES += \
+android.hardware.camera2
 
 # CAS
 PRODUCT_PACKAGES += \
