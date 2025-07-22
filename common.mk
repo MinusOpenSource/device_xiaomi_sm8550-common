@@ -353,12 +353,14 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_hidl_wrapper.xml \
     qti_telephony_hidl_wrapper_prd.xml \
-    qti_telephony_utils.xml
+    qti_telephony_utils.xml \
+    telephony-ext
 
 PRODUCT_PACKAGES += \
     xiaomi-telephony-stub
 
 PRODUCT_BOOT_JARS += \
+    telephony-ext \
     xiaomi-telephony-stub
 
 PRODUCT_COPY_FILES += \
